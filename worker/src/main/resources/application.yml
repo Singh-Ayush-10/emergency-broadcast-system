@@ -1,0 +1,25 @@
+spring:
+  application:
+    name: worker
+  kafka:
+    bootstrap-servers: localhost:9092
+  data:
+    redis:
+      host: localhost
+      port: 6379
+notification:
+  mock:
+    push:
+      transient-failure-rate: 0.05
+      permanent-failure-rate: 0.03
+    sms:
+      transient-failure-rate: 0.05
+      permanent-failure-rate: 0.03
+    email:
+      transient-failure-rate: 0.03
+      permanent-failure-rate: 0.02
+    voice:
+      transient-failure-rate: 0.08
+      permanent-failure-rate: 0.05
+server:
+  port: 8081

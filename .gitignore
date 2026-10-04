@@ -1,0 +1,19 @@
+# Maven build output - every module generates one of these
+target/
+
+# IntelliJ's own compiled-output folder (separate from Maven's target/)
+out/
+
+# IntelliJ IDEA project files - personal to your machine, not shared
+.idea/
+*.iml
+
+# Compiled class files, just in case anything sits outside target/
+*.class
+
+# OS-generated junk files
+.DS_Store
+Thumbs.db
+
+# Logs
+*.log

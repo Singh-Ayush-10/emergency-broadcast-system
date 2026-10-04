@@ -1,0 +1,28 @@
+spring:
+  application:
+    name: tracking
+
+  datasource:
+    url: jdbc:postgresql://localhost:5432/broadcast_db?reWriteBatchedInserts=true
+    username: myuser
+    password: mypassword
+    hikari:
+      maximum-pool-size: 20
+      minimum-idle: 5
+
+  jpa:
+    hibernate:
+      ddl-auto: update
+    show-sql: false
+    properties:
+      hibernate:
+        jdbc:
+          batch_size: 100
+        order_inserts: true
+        order_updates: true
+
+tracking:
+  flush-interval-ms: 500
+
+server:
+  port: 8090
